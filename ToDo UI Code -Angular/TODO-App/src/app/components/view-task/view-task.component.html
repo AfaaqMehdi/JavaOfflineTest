@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 well">
+    <div class="row">
+      <h4 class="alignCentre text-success"><b>Pending Task</b></h4>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Task Name</th>
+            <th scope="col">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="table-primary" *ngFor="let task of taskList">
+            <td *ngIf="task.taskStatus == 'Pending'">{{task.taskName}}</td>
+            <td *ngIf="task.taskStatus == 'Pending'">{{task.taskStatus}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <hr/>
+    <div class="row">
+        <h4 class="alignCentre text-success"><b>Completed Task</b></h4>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Task Name</th>
+              <th scope="col">Status</th>
+            </tr>
+            <tbody>
+                <tr class="table-primary" *ngFor="let task of taskList" >
+                  <td *ngIf="task.taskStatus == 'Completed'">{{task.taskName}}</td>
+                  <td *ngIf="task.taskStatus == 'Completed'">{{task.taskStatus}}</td>
+                </tr>
+              </tbody>
+        </table>
+      </div>
+  </div>
+</div>

@@ -1,0 +1,89 @@
+/* Include the padding and border in an element's total width and height */
+* {
+    box-sizing: border-box;
+}
+
+
+/* Style the header */
+.header {
+    background-color: grey;
+    padding: 30px 40px;
+    color: white;
+    text-align: center;
+}
+
+/* Clear floats after the header */
+.header:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Style the input */
+input {
+    border: none;
+    width: 75%;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+}
+
+input {
+    border: none;
+    width: 75%;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+}
+
+/* Style the "Add" button */
+.addBtn {
+  
+    width: 25%;
+    background: blue;
+    color: white;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.deleteBtn {
+    
+      width: 15%;
+      background: red;
+      color: white;
+      text-align: center;
+
+      margin: auto;
+      width: 20%;
+      border-radius: 10px;
+      border: none;
+      padding: 5px 5px 5px 5px;
+  }
+  
+.updateBtn {
+    
+      background: green;
+      color: white;
+      text-align: center;
+
+      margin: auto;
+      width: 20%;
+      border-radius: 10px;
+      border: none;
+      padding: 5px 5px 5px 5px;
+  }
+
+  .taskName {
+    width: 100%;
+    text-align: left;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+.addBtn:hover {
+    background-color: #bbb;
+}

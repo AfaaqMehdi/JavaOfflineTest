@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="jumbotron">
+    <div class="header">
+      <h2>My To Do List</h2>
+      <input type="text" [(ngModel)]="taskName" name="val2" class="form-control" placeholder="Task or Item">
+      <span>
+        <button type="submit" class="btn btn-primary addBtn" (click)="addTask()" [disabled]="(taskName == undefined || taskName == '' || taskName.length == 0) ? true : false">Add</button>
+      </span>
+    </div>
+    <div class="list-group" *ngFor="let task of taskList" >
+      <span class="list-group-item list-group-item-action list-group-item-success taskName">{{task.taskName}}
+        <button type="submit" style="float: right;" class="btn btn-primary deleteBtn" (click)="deleteTask(task.id)">Delete</button>
+        <button type="submit" style="float: right;" class="btn btn-primary updateBtn" (click)="updateTask(task.id)" [disabled]="task.taskStatus == 'Completed' ? true : false">Mark Task Complete</button>
+      </span>
+    </div>
+  </div>
+</div>
